@@ -1,0 +1,66 @@
+tags:
+  - name: quotation
+    description: Quotation API
+
+paths:
+  # [POST] quote
+  /api/quote:
+    post:
+      tags:
+        - quotation
+      summary: Create a new quotation
+      parameters:
+        - name: body
+          in: body
+          description: Quotation Request Data
+          required: true
+          schema:
+            $ref: "#/definitions/QuoteRequest"
+      responses:
+        201:
+          description: "Created"
+        400:
+          description: "Bad Request"
+        500:
+          description: "Server Error"
+
+definitions:
+  QuoteRequest:
+    type: object
+    required:
+      - fullAddress
+      - projectType
+      - propertySize
+      - scopeOfWork
+      - timelineNeeded
+      - fullName
+      - email
+    properties:
+      fullAddress:
+        type: string
+        description: Full project address
+      projectType:
+        type: string
+        enum: [Basement, Deck, Commercial Interior, Change of Use]
+      propertySize:
+        type: integer
+        description: Property size in sq ft
+      scopeOfWork:
+        type: string
+        enum: [Renovation, New Construction]
+      timelineNeeded:
+        type: string
+        enum: [Standard, Rushed]
+      fullName:
+        type: string
+        description: Customer's full name
+      email:
+        type: string
+        description: Customer's email address
+      phoneNumber:
+        type: string
+        description: Customer's phone number (optional)
+
+schemes:
+  - https
+  - http

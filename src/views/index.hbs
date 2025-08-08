@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Permit | Get your project quote in minutes!</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      nonce="{{nonce}}"></script>
+  </head>
+  <body>
+    <br>
+    <center>
+      <img src="./image.png" alt="permit-ca">
+      <p>Get your project quote in minutes!</p>
+    </center>
+    <br>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="step active" data-step="1">
+          <div class="circle">1</div>
+          <div class="step-content">
+            <h4>Project Details</h4>
+            <p>Address, type & size</p>
+          </div>
+        </div>
+        <div class="step" data-step="2">
+          <div class="circle">2</div>
+          <div class="step-content">
+            <h4>Work Details</h4>
+            <p>Scope & timeline</p>
+          </div>
+        </div>
+        <div class="step" data-step="3">
+          <div class="circle">3</div>
+          <div class="step-content">
+            <h4>Contact Details</h4>
+            <p>Your contact info</p>
+          </div>
+        </div>
+        <div class="step" data-step="4">
+          <div class="circle">4</div>
+          <div class="step-content">
+            <h4>Quotation</h4>
+            <p>Your final quotation</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Area -->
+      <div class="form-area">
+        <form id="multiStepForm">
+          <!-- Step 1 -->
+          <div class="form-step active" data-step="1">
+            <h2>Project Details</h2>
+            <label>Full Address</label>
+            <input
+              type="text"
+              name="fullAddress"
+              id="fullAddress"
+              placeholder="Enter address" />
+            <div class="error" id="error-fullAddress"></div>
+
+            <label>Project Type</label>
+            <select name="projectType" id="projectType">
+              <option value>Select</option>
+              <option>Basement</option>
+              <option>Deck</option>
+              <option>Commercial Interior</option>
+              <option>Change of Use</option>
+            </select>
+            <div class="error" id="error-projectType"></div>
+
+            <label>Property Size (sq ft)</label>
+            <input
+              type="number"
+              name="propertySize"
+              id="propertySize"
+              placeholder="1000" />
+            <div class="error" id="error-propertySize"></div>
+
+            <div class="buttons">
+              <div></div>
+              <button type="button" class="next-btn">Next</button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="form-step" data-step="2">
+            <h2>Work Details</h2>
+            <label>Scope of Work</label>
+            <select name="scopeOfWork" id="scopeOfWork">
+              <option value>Select</option>
+              <option>Renovation</option>
+              <option>New Construction</option>
+            </select>
+            <div class="error" id="error-scopeOfWork"></div>
+
+            <label>Timeline Needed</label>
+            <select name="timelineNeeded" id="timelineNeeded">
+              <option value>Select</option>
+              <option value="Standard">Standard: 2-3 Weeks</option>
+              <option value="Rushed">Rushed: 5-7 Days</option>
+            </select>
+            <div class="error" id="error-timelineNeeded"></div>
+
+            <div class="buttons">
+              <button type="button" class="prev-btn">Back</button>
+              <button type="button" class="next-btn">Next</button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="form-step" data-step="3">
+            <h2>Contact Details</h2>
+            <label>Full Name</label>
+            <input
+              type="text"
+              name="fullName"
+              id="fullName"
+              placeholder="Your name" />
+            <div class="error" id="error-fullName"></div>
+
+            <label>Email Address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@mail.com" />
+            <div class="error" id="error-email"></div>
+
+            <label>Phone Number (optional)</label>
+            <input type="text" name="phoneNumber" id="phoneNumber" />
+
+            <div class="buttons">
+              <button type="button" class="prev-btn">Back</button>
+              <button type="button" id="submitForm">Submit</button>
+            </div>
+          </div>
+        </form>
+        <!-- Step 3 -->
+        <div class="form-step" data-step="4">
+          <div class="result-box">
+            <h3>Quote Summary</h3>
+            <p id="finalQuote"></p>
+            <div id="breakdown"></div>
+            <p id="referenceNumber"></p>
+            <p id="thankYouMessage"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Google Places API -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key={{googl_map_key}}&libraries=places"
+      nonce="{{nonce}}"></script>
+    <script src="script.js" nonce="{{nonce}}"></script>
+  </body>
+</html>

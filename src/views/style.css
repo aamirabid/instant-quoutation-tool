@@ -1,0 +1,184 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: linear-gradient(
+    to right,
+    #e2e2e2 50%,
+    rgba(84, 196, 155, 0.992) 50%
+  );
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 85%;
+  margin: 40px auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 28%;
+  background: #f0f0f0;
+  padding: 20px;
+  border-right: 2px solid #ddd;
+}
+
+.step {
+  margin-top: 35px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ccc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.step.active .circle {
+  background: rgba(84, 196, 155, 0.992);
+}
+
+.step.completed .circle {
+  background: #2196f3;
+}
+
+.step-content h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.step-content p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Form Area */
+.form-area {
+  width: 72%;
+  padding: 30px;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100% !important;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background: rgba(84, 196, 155, 0.992);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.prev-btn {
+  background: #999;
+}
+
+.result-box {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-box h3 {
+  margin-top: 0;
+  text-align: center;
+  color: #333;
+}
+
+#finalQuote {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+}
+
+#finalQuote span {
+  color: #4caf50;
+}
+
+.breakdown {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.breakdown div {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+.breakdown div:last-child {
+  border-bottom: none;
+}
+
+.breakdown span {
+  font-weight: 600;
+  color: #333;
+}
+
+#referenceNumber {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #555;
+  text-align: center;
+}
+
+#thankYouMessage {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #777;
+  text-align: center;
+}
