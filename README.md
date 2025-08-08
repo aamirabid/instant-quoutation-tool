@@ -76,7 +76,7 @@ npm run dev
 
 - **Landing Page**: [http://localhost:3000](http://localhost:3000)
 - **API Documentation (Swagger)**: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
-- ** For Data **: you can find ./quotes-db.json file
+- **For Data**: you can find ./quotes-db.json file
 
 ---
 
