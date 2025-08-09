@@ -1,7 +1,7 @@
 {
-  "name": "liqa-pay",
+  "name": "instant-quotation",
   "version": "0.0.0",
-  "description": "Transformed the way of looking for real estate agents pay!",
+  "description": "Transformed the way of looking for real estate quotation!",
   "author": "",
   "license": "ISC",
   "scripts": {
